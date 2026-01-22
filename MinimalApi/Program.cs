@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using MinimalApi.Application;
 using MinimalApi.Core.Models;
 using MinimalApi.Infrastructure;
 
@@ -18,6 +19,7 @@ namespace MinimalApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAplicationServices();
 
             var app = builder.Build();
 
