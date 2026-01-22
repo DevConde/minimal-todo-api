@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MinimalApi.Application\MinimalApi.Application.csproj" />
+    <ProjectReference Include="..\MinimalApi.Core\MinimalApi.Core.csproj" />
+    <ProjectReference Include="..\MinimalApi.Infrastructure\MinimalApi.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
