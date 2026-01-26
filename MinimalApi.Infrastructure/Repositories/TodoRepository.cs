@@ -18,7 +18,7 @@ namespace MinimalApi.Infrastructure.Repositories
         }
 
 
-        public void InsertTodo(Todo todo)
+        public void CreateTodo(Todo todo)
         {
             _dbContext.Todos.Add(todo);
             _dbContext.SaveChanges();

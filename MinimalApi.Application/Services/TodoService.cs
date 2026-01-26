@@ -1,5 +1,9 @@
-﻿using MinimalApi.Core.Repositories;
-using MinimalApi.Core.Services;
+﻿using Mapster;
+using MinimalApi.Application.Abstractions;
+using MinimalApi.Application.Requests;
+using MinimalApi.Application.Responses;
+using MinimalApi.Core.Models;
+using MinimalApi.Core.Repositories;
 using MinimalApi.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -17,12 +21,16 @@ namespace MinimalApi.Application.Services
             _repository = repository;
         }
 
-        public void CreateTodo()
+        public void CreateTodo(CreateTodoRequest request)
         {
-            // Map from 'request' to 'domain'
-            _repository
+            _repository.CreateTodo(request.Adapt<Todo>());
         }
-        // Create
+
+        public IEnumerable<GetTodoResponse> GetTodos()
+        {
+            var todos = _repository.GetTodos().ToList();
+            return todos.Adapt<IEnumerable<GetTodoResponse>>();
+        }
         // Read
         // Update
         // Delete

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MinimalApi.Core\MinimalApi.Core.csproj" />
+    <ProjectReference Include="..\MinimalApi.Core\MinimalApi.Domain.csproj" />
   </ItemGroup>
 
 </Project>

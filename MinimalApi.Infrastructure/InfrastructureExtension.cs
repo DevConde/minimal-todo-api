@@ -1,17 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MinimalApi.Core.Repositories;
+using MinimalApi.Infrastructure.Repositories;
 
 namespace MinimalApi.Infrastructure
 {
     public static class InfrastructureExtension
     {
-        public static void AddRepositories(this IServiceCollection services)
+        public static void AddInfrastructureExtensions(this IServiceCollection services)
         {
-
+            services.AddScoped<ITodoRepository, TodoRepository>();
         }
     }
 }

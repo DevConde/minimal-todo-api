@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinimalApi.Core.Services
+namespace MinimalApi.Application.Mappers
 {
-    public interface ITodoService
+    internal class DomainToApplicationMapper
     {
     }
 }

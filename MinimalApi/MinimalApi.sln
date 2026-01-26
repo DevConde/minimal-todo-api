@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi", "MinimalApi.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi.Application", "..\MinimalApi.Application\MinimalApi.Application.csproj", "{CA477BD7-B567-48E6-8E91-3D4370946C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi.Core", "..\MinimalApi.Core\MinimalApi.Core.csproj", "{5A55DF0E-A3F7-4F1A-9DED-77F54A0E5E54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi.Domain", "..\MinimalApi.Core\MinimalApi.Domain.csproj", "{5A55DF0E-A3F7-4F1A-9DED-77F54A0E5E54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi.Infrastructure", "..\MinimalApi.Infrastructure\MinimalApi.Infrastructure.csproj", "{36B07058-FE25-4AA6-9FD0-033C33FD2526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi.Presentation", "..\MinimalApi.Presentation\MinimalApi.Presentation.csproj", "{97ED8297-0E3C-4AE5-8D6E-EA258D81B3C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{36B07058-FE25-4AA6-9FD0-033C33FD2526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B07058-FE25-4AA6-9FD0-033C33FD2526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B07058-FE25-4AA6-9FD0-033C33FD2526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97ED8297-0E3C-4AE5-8D6E-EA258D81B3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97ED8297-0E3C-4AE5-8D6E-EA258D81B3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97ED8297-0E3C-4AE5-8D6E-EA258D81B3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97ED8297-0E3C-4AE5-8D6E-EA258D81B3C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

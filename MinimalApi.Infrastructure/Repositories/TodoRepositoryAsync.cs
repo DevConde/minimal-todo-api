@@ -10,7 +10,7 @@ namespace MinimalApi.Infrastructure.Repositories
 {
     public partial class TodoRepository
     {
-        public async Task InsertTodoAsync(Todo todo)
+        public async Task CreateTodoAsync(Todo todo)
         {
             _dbContext.Todos.Add(todo);
             await _dbContext.SaveChangesAsync().ConfigureAwait(false);

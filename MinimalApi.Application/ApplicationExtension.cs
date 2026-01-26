@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using MinimalApi.Application.Abstractions;
 using MinimalApi.Application.Services;
-using MinimalApi.Core.Services;
 
 namespace MinimalApi.Application
 {
@@ -8,7 +8,7 @@ namespace MinimalApi.Application
     {
         public static void AddAplicationServices(this IServiceCollection services)
         {
-            services.AddSingleton<ITodoService, TodoService>();
+            services.AddScoped<ITodoService, TodoService>();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace MinimalApi.Core.Repositories
         IEnumerable<Todo> GetTodos();
         Task<IEnumerable<Todo>> GetTodosAsync();
 
-        public void InsertTodo(Todo todo);
-        Task InsertTodoAsync(Todo todo);
+        public void CreateTodo(Todo todo);
+        Task CreateTodoAsync(Todo todo);
     }
 }
