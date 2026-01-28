@@ -12,9 +12,14 @@ namespace MinimalApi.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public IEnumerable<Todo> FindByCriteria(Func<Todo, bool> criteria)
+        {
+            return _dbContext.Todos.Where(criteria);
+        }
+
         public IEnumerable<Todo> GetTodos()
         {
-            return _dbContext.Todos.ToList();
+            return _dbContext.Todos;
         }
 
 
@@ -22,6 +27,16 @@ namespace MinimalApi.Infrastructure.Repositories
         {
             _dbContext.Todos.Add(todo);
             _dbContext.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var todo = _dbContext.Todos.Find(id);
+            if (todo != null)
+            {
+                _dbContext.Todos.Remove(todo);
+                _dbContext.SaveChanges();
+            }
         }
     }
 }

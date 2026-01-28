@@ -4,12 +4,6 @@ using MinimalApi.Application.Requests;
 using MinimalApi.Application.Responses;
 using MinimalApi.Core.Models;
 using MinimalApi.Core.Repositories;
-using MinimalApi.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MinimalApi.Application.Services
 {
@@ -26,11 +20,30 @@ namespace MinimalApi.Application.Services
             _repository.CreateTodo(request.Adapt<Todo>());
         }
 
+        public void DeleteTodo(int id)
+        {
+            _repository.Delete(id);
+        }
+
+        #region Read
         public IEnumerable<GetTodoResponse> GetTodos()
         {
             var todos = _repository.GetTodos().ToList();
             return todos.Adapt<IEnumerable<GetTodoResponse>>();
         }
+
+        public IEnumerable<GetTodoResponse> GetCompletedTodos()
+        {
+            var todos = _repository.FindByCriteria(e => e.IsComplete);
+            return todos.Adapt<IEnumerable<GetTodoResponse>>();
+        }
+
+        public IEnumerable<GetTodoResponse> GetTodosById(int id)
+        {
+            var todos = _repository.FindByCriteria(e => e.Id == id);
+            return todos.Adapt<IEnumerable<GetTodoResponse>>();
+        }
+        #endregion
         // Read
         // Update
         // Delete

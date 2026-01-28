@@ -4,6 +4,9 @@ namespace MinimalApi.Core.Repositories
 {
     public interface ITodoRepository
     {
+        IEnumerable<Todo> FindByCriteria(Func<Todo, bool> criteria);
+        void Delete(int id);
+
         IEnumerable<Todo> GetTodos();
         Task<IEnumerable<Todo>> GetTodosAsync();
 
